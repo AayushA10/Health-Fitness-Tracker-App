@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <h2>Welcome to your Dashboard</h2>
+    
+    <h3>Your Fitness Records</h3>
+    <button onclick="fetchRecords()">Load My Fitness Records</button>
+    <ul id="fitnessList"></ul>
+
+    <h3>Add New Fitness Record</h3>
+    <form id="fitnessForm">
+        <input type="text" id="workout_type" placeholder="Workout Type" required />
+        <input type="number" id="duration_minutes" placeholder="Duration (minutes)" required />
+        <button type="submit">Add Record</button>
+    </form>
+
+    <h3>Predict Calories</h3>
+    <form id="predictForm">
+        <input type="number" id="days" placeholder="Days in Future" required />
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="predictionResult"></div>
+</body>
+</html>
